@@ -1,0 +1,32 @@
+.homePage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure smooth scrolling for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add spacing for fixed header */
+.mainContent > section:first-child {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Print styles */
+@media print {
+  .homePage {
+    min-height: auto;
+  }
+  
+  .mainContent {
+    flex: none;
+  }
+}

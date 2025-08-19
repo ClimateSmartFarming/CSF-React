@@ -1,0 +1,18 @@
+.sectionTitle {
+  font-size: var(--font-size-section-title);
+  font-family: var(--font-family-heading);
+  color: var(--color-neutral-charcoal);
+  margin-bottom: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.centered {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    margin-bottom: 30px;
+  }
+}

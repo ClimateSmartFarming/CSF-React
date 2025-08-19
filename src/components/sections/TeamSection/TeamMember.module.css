@@ -1,0 +1,157 @@
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all var(--transition-default);
+  cursor: pointer;
+}
+
+.teamMember:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.teamMember:focus {
+  outline: 2px solid var(--color-primary-green);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.teamMember[role="button"] {
+  cursor: pointer;
+}
+
+.teamMember:not([role="button"]) {
+  cursor: default;
+}
+
+.teamPhoto {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-neutral-gray);
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary-green-light), var(--color-primary-green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initials {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  font-family: var(--font-family-heading);
+}
+
+.memberInfo {
+  width: 100%;
+}
+
+.memberName {
+  font-size: var(--font-size-card-title);
+  font-weight: bold;
+  color: var(--color-neutral-charcoal);
+  margin-bottom: 8px;
+  font-family: var(--font-family-heading);
+  line-height: 1.3;
+}
+
+.memberRole {
+  font-size: var(--font-size-body-text);
+  color: var(--color-primary-green);
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.memberSpecialty {
+  font-size: var(--font-size-small-text);
+  color: var(--color-neutral-dark-gray);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactInfo {
+  margin-top: 8px;
+}
+
+.emailIcon {
+  color: var(--color-primary-green);
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity var(--transition-default);
+}
+
+.teamMember:hover .emailIcon {
+  opacity: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .teamMember {
+    padding: 12px;
+  }
+
+  .teamPhoto {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .initials {
+    font-size: 24px;
+  }
+
+  .memberName {
+    margin-bottom: 6px;
+  }
+
+  .memberRole {
+    margin-bottom: 4px;
+  }
+
+  .memberSpecialty {
+    margin-bottom: 6px;
+    min-height: 35px;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .teamPhoto {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .initials {
+    font-size: 20px;
+  }
+
+  .memberSpecialty {
+    min-height: 30px;
+  }
+}

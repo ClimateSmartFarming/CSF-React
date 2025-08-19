@@ -1,0 +1,62 @@
+:root {
+  /* Color Palette */
+  --color-primary-green: #2e7d32;
+  --color-primary-green-light: #43a047;
+  --color-primary-green-accent: #66bb6a;
+  
+  /* Neutral Colors */
+  --color-neutral-white: #ffffff;
+  --color-neutral-off-white: #fafafa;
+  --color-neutral-light-gray: #f5f5f5;
+  --color-neutral-gray: #e0e0e0;
+  --color-neutral-dark-gray: #666666;
+  --color-neutral-charcoal: #333333;
+  --color-neutral-dark-charcoal: #2e3d2e;
+  
+  /* Gradients */
+  --gradient-header: linear-gradient(to right, #2e7d32, #43a047);
+  --gradient-hero: linear-gradient(135deg, #f0f4f0 0%, #d9e4d9 100%);
+  --gradient-tool-card: linear-gradient(135deg, #81c784, #66bb6a);
+  
+  /* Typography */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-heading: Georgia, serif;
+  
+  /* Font Sizes */
+  --font-size-hero-title: 48px;
+  --font-size-hero-subtitle: 20px;
+  --font-size-section-title: 32px;
+  --font-size-card-title: 18px;
+  --font-size-body-text: 16px;
+  --font-size-small-text: 14px;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --padding-desktop: 40px;
+  --padding-mobile: 20px;
+  
+  /* Section Heights */
+  --header-height: 80px;
+  --hero-height: 320px;
+  --featured-tools-height: 500px;
+  --team-section-height: 450px;
+  --resources-section-height: 400px;
+  --footer-height: 280px;
+  
+  /* Spacing */
+  --section-padding: 60px;
+  --card-gap: 30px;
+  --grid-gap: 30px;
+  
+  /* Breakpoints */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+  
+  /* Transitions */
+  --transition-default: 0.2s ease;
+  --transition-hover: 0.3s ease;
+  
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
