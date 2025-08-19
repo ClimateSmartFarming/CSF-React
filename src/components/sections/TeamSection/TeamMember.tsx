@@ -60,10 +60,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
           {member.role}
         </p>
         
-        <p className={styles.memberSpecialty}>
-          {member.specialty}
-        </p>
-        
         {member.email && (
           <div className={styles.contactInfo}>
             <span className={styles.emailIcon} aria-hidden="true">✉</span>

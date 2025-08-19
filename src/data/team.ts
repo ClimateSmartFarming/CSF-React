@@ -11,52 +11,53 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: 'arthur-degaetano',
-    name: 'Arthur DeGaetano',
-    role: 'Director',
-    specialty: 'Climate Science & Agricultural Meteorology',
-    email: 'atd2@cornell.edu',
-    bio: 'Leading climate science research and agricultural weather applications for over 25 years.'
+    id: 'allison-chatrchyan',
+    name: 'Dr. Allison Chatrchyan',
+    role: 'Climate Adaptation & Mitigation',
+    specialty: 'Climate Adaptation & Mitigation',
+    email: 'placeholder@cornell.edu'
   },
   {
-    id: 'dan-brown',
-    name: 'Dan Brown',
-    role: 'Extension Associate',
-    specialty: 'Crop Production & Pest Management',
-    email: 'djb23@cornell.edu',
-    bio: 'Specializing in integrated pest management and sustainable crop production systems.'
+    id: 'candace-hulbert',
+    name: 'Candace Hulbert',
+    role: 'Climate Adaptation & Mitigation',
+    specialty: 'Climate Adaptation & Mitigation',
+    email: 'placeholder@cornell.edu'
   },
   {
-    id: 'keith-waldron',
-    name: 'Keith Waldron',
-    role: 'Research Scientist',
-    specialty: 'Weather Data & Modeling',
-    email: 'krw24@cornell.edu',
-    bio: 'Expert in weather station networks and agricultural weather forecasting models.'
+    id: 'kitty-oneil',
+    name: "Dr. Kitty O'Neil",
+    role: 'Ag Climate Resiliency Specialist',
+    specialty: 'Ag Climate Resiliency Specialist',
+    email: 'placeholder@cornell.edu'
   },
   {
-    id: 'sarah-taylor',
-    name: 'Sarah Taylor',
-    role: 'Extension Educator',
-    specialty: 'Soil Health & Water Management',
-    email: 'st42@cornell.edu',
-    bio: 'Focused on soil health assessment and water conservation strategies for farmers.'
+    id: 'elizabeth-buck',
+    name: 'Elizabeth Buck',
+    role: 'Vegetable Specialist',
+    specialty: 'Vegetable Specialist',
+    email: 'placeholder@cornell.edu'
   },
   {
-    id: 'michael-hoffman',
-    name: 'Michael Hoffman',
-    role: 'Research Associate',
-    specialty: 'Fruit & Vegetable Production',
-    email: 'mh47@cornell.edu',
-    bio: 'Researching climate adaptation strategies for specialty crop production.'
+    id: 'lindsay-ferlito',
+    name: 'Lindsay Ferlito',
+    role: 'Dairy Management',
+    specialty: 'Dairy Management',
+    email: 'placeholder@cornell.edu'
   },
   {
-    id: 'jane-wilson',
-    name: 'Jane Wilson',
-    role: 'Outreach Coordinator',
-    specialty: 'Farmer Education & Technology Transfer',
-    email: 'jw89@cornell.edu',
-    bio: 'Connecting research with farmers through educational programs and technology tools.'
+    id: 'janice-degni',
+    name: 'Janice Degni',
+    role: 'Dairy & Field Crops',
+    specialty: 'Dairy & Field Crops',
+    email: 'placeholder@cornell.edu'
+  },
+  {
+    id: 'savanna-shellnutt',
+    name: 'Savanna Shellnutt',
+    role: 'Ag Climate Resiliency Specialist',
+    specialty: 'Ag Climate Resiliency Specialist',
+    email: 'placeholder@cornell.edu'
   }
 ];
 
