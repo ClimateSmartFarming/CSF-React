@@ -8,5 +8,10 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCase'
     }
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 4173,
+    allowedHosts: ['csf-react-production.up.railway.app']
   }
 })
