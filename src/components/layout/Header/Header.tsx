@@ -10,11 +10,9 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { label: 'Tools', href: '/tools' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'Climate', href: '/climate' },
-  { label: 'Team', href: '/team' },
   { label: 'Programs', href: '/programs' },
-  { label: 'Videos', href: '/videos' }
+  { label: 'News', href: '/news' },
+  { label: 'About Us', href: '/about' },
 ];
 
 const Header: React.FC = () => {
