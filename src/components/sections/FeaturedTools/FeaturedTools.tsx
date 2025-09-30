@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import Container from '../../common/Container/Container';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
@@ -12,11 +13,12 @@ interface FeaturedToolsProps {
 }
 
 const FeaturedTools: React.FC<FeaturedToolsProps> = ({ 
-  maxTools = 8,
+  maxTools = 4,
   showTitle = true,
   title = "Featured Tools"
 }) => {
   const toolsToShow = featuredTools.slice(0, maxTools);
+  const navigate = useNavigate();
 
   return (
     <section className={styles.featuredToolsSection}>
@@ -40,7 +42,7 @@ const FeaturedTools: React.FC<FeaturedToolsProps> = ({
           <div className={styles.viewAllContainer}>
             <button 
               className={styles.viewAllButton}
-              onClick={() => console.log('Navigate to all tools')}
+              onClick={() => navigate('/tools')}
             >
               View All Tools
             </button>

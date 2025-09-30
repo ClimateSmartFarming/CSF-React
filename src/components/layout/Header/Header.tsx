@@ -26,9 +26,13 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.headerContent}>
-          <div className={styles.logoArea}>
-            <span className={styles.logoText}>Cornell CSF</span>
-          </div>
+          <a
+                href='/'
+            >
+            <div className={styles.logoArea}>
+                <span className={styles.logoText}>Cornell CSF</span>
+            </div>
+          </a>
           
           <nav className={styles.navigation}>
             {navigationItems.map((item) => (

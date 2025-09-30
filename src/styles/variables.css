@@ -37,10 +37,11 @@
   
   /* Section Heights */
   --header-height: 80px;
-  --hero-height: 320px;
+  --hero-height: 200px;
   --featured-tools-height: 500px;
   --team-section-height: 450px;
   --resources-section-height: 400px;
+  --news-section-height: 1200px;
   --footer-height: 280px;
   
   /* Spacing */

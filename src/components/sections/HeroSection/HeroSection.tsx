@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
   title = "Climate Smart Farming",
-  subtitle = "Empowering farmers with data-driven tools and resources for sustainable agriculture in a changing climate"
+  subtitle = ""
 }) => {
   return (
     <section className={styles.heroSection}>

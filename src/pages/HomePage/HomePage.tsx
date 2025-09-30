@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../../components/layout/Header/Header';
-import Footer from '../../components/layout/Footer/Footer';
 import HeroSection from '../../components/sections/HeroSection/HeroSection';
 import FeaturedTools from '../../components/sections/FeaturedTools/FeaturedTools';
 import TeamSection from '../../components/sections/TeamSection/TeamSection';
@@ -10,7 +8,6 @@ import styles from './HomePage.module.css';
 const HomePage: React.FC = () => {
   return (
     <div className={styles.homePage}>
-      <Header />
       
       <main className={styles.mainContent}>
         <HeroSection 
@@ -20,22 +17,21 @@ const HomePage: React.FC = () => {
         
         <FeaturedTools 
           title="Featured Tools"
-          maxTools={8}
+          maxTools={4}
         />
-        
-        <TeamSection 
+
+        <TeamSection
           title="Meet Our Team"
           maxMembers={6}
         />
-        
-        <ResourcesSection 
+
+        <ResourcesSection
           title="Featured Resources"
           maxResources={6}
           featuredOnly={true}
         />
       </main>
-      
-      <Footer />
+
     </div>
   );
 };
