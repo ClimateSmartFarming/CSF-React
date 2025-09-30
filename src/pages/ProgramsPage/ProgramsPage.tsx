@@ -15,7 +15,7 @@ const ProgramsPage: React.FC = () => {
             <Container>
             <section className="entry-content cf" itemProp="articleBody">
 
-                <img decoding="async" fetchpriority="high" className="wp-image-1950  alignleft"
+                <img decoding="async" className="wp-image-1950  alignleft"
                  src="https://climatesmartfarming.org/wp-content/uploads/2023/12/Screenshot-2023-12-21-125339-e1703192135421.png"
                  alt="" width="380" height="313"/>
 
