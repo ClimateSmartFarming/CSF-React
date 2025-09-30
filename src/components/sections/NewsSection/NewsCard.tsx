@@ -1,7 +1,7 @@
 import React from 'react';
 import type { newsItem } from '../../../data/news';
 import styles from './NewsSection.module.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { convert } from "html-to-text";
 
 interface SummaryProps {

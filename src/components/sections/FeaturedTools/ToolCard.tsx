@@ -1,15 +1,18 @@
 import React from 'react';
 import type { Tool } from '../../../data/tools';
 import styles from './ToolCard.module.css';
+import { useNavigate } from 'react-router-dom';
+
 
 interface ToolCardProps {
   tool: Tool;
 }
 
 const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
+  const navigate = useNavigate();
   const handleClick = () => {
     // For now, just log the click - in a real app this would navigate
-    console.log(`Navigating to ${tool.link}`);
+    navigate(`/tools/${tool.id}`);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
@@ -20,7 +23,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
   };
 
   return (
-    <div 
+    <div
       className={styles.toolCard}
       onClick={handleClick}
       onKeyDown={handleKeyDown}

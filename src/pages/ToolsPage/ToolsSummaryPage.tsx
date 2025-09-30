@@ -4,7 +4,7 @@ import styles from '../HomePage/HomePage.module.css';
 import FeaturedTools from "../../components/sections/FeaturedTools/FeaturedTools.tsx";
 import Container from '../../components/common/Container/Container';
 
-const ToolsPage: React.FC = () => {
+const ToolsSummaryPage: React.FC = () => {
   return (
     <div className={styles.homePage}>
 
@@ -36,4 +36,4 @@ const ToolsPage: React.FC = () => {
   );
 };
 
-export default ToolsPage;
+export default ToolsSummaryPage;

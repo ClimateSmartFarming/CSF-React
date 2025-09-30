@@ -4,7 +4,8 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import NewsArticlePage from "./pages/NewsPage/NewsArticlePage";
 import ProgramsPage from "./pages/ProgramsPage/ProgramsPage";
-import ToolsPage from "./pages/ToolsPage/ToolsPage";
+import ToolsSummaryPage from "./pages/ToolsPage/ToolsSummaryPage";
+import ToolPage from './pages/ToolsPage/ToolPage';
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 
@@ -19,7 +20,8 @@ function App() {
               <Route path="/news" element={<NewsPage />} />
               <Route path="/news/:id" element={<NewsArticlePage />} />
               <Route path="/programs" element={<ProgramsPage />} />
-              <Route path="/tools" element={<ToolsPage />} />
+              <Route path="/tools" element={<ToolsSummaryPage />} />
+              <Route path="/tools/:id" element={<ToolPage />} />
           </Routes>
       <Footer/>
     </Router>
