@@ -8,14 +8,13 @@ const NewsPage: React.FC = () => {
     <div className={styles.homePage}>
 
       <main className={styles.mainContent}>
-        <HeroSection
-          title="News"
-        />
+          <HeroSection
+            title="News"
+          />
 
           <NewsSection
-          maxResources={12}
-        />
-
+            maxResources={12}
+          />
       </main>
 
     </div>

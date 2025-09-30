@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../HomePage/HomePage.module.css';
 import HeroSection from "../../components/sections/HeroSection/HeroSection.tsx";
+import Container from '../../components/common/Container/Container';
 
 const ProgramsPage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const ProgramsPage: React.FC = () => {
                 title="Programs"
             />
 
+            <Container>
             <section className="entry-content cf" itemProp="articleBody">
 
                 <img decoding="async" fetchpriority="high" className="wp-image-1950  alignleft"
@@ -140,6 +142,7 @@ const ProgramsPage: React.FC = () => {
                     <a href="https://climatestewards.cornell.edu/">Read More</a>
                 </p>
             </section>
+            </Container>
 
         </main>
     </div>
