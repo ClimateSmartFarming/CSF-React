@@ -13,7 +13,7 @@ const NewsPage: React.FC = () => {
           />
 
           <NewsSection
-            maxResources={12}
+            maxNews={12}
           />
       </main>
 

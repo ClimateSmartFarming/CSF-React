@@ -16,11 +16,12 @@ const ToolPage: React.FC = () => {
       <Link to="/tools" className={styles.backLink}>&laquo; Back to Tools</Link>
 
       <h1 className={styles.title}>{tool.title}</h1>
-      {tool.image && (
-        <div className={styles.imageWrapper}>
-          <img src={tool.image} alt={tool.title} className={styles.image} />
-        </div>
-      )}
+      {/*  Placeholder for a future image */}
+      {/*{tool.icon && (*/}
+      {/*  <div className={styles.imageWrapper}>*/}
+      {/*    <img src={tool.icon} alt={tool.title} className={styles.image} />*/}
+      {/*  </div>*/}
+      {/*)}*/}
 
       <p className={styles.description}>{tool.description}</p>
         <p><b>Tools Pages Coming Soon</b></p>
