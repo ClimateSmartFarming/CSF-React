@@ -13,11 +13,8 @@ const AboutPage: React.FC = () => {
             />
 
             <Container>
-                <img decoding="async" className="alignnone size-medium wp-image-275"
-                     src="https://climatesmartfarming.org/wp-content/uploads/2015/10/LauraMcDermottfield-240x176.jpg"
-                     alt="LauraMcDermottfield" width="240" height="176"
-                     srcSet="https://climatesmartfarming.org/wp-content/uploads/2015/10/LauraMcDermottfield-240x176.jpg 240w, https://climatesmartfarming.org/wp-content/uploads/2015/10/LauraMcDermottfield-123x90.jpg 123w, https://climatesmartfarming.org/wp-content/uploads/2015/10/LauraMcDermottfield.jpg 300w"
-                     sizes="(max-width: 240px) 100vw, 240px"/>
+                <img src="https://climatesmartfarming.org/wp-content/uploads/2015/10/LauraMcDermottfield-240x176.jpg"
+                     alt="LauraMcDermottfield" width="240" height="176"/>
 
                 <h3>
                     The Cornell Climate Smart Farming program is a voluntary initiative that
@@ -71,7 +68,7 @@ const AboutPage: React.FC = () => {
                         information exchange and recognition
                     </li>
                 </ul>
-                <p align="left">
+                <p>
                     <strong>For more information, contact the CSF Program at:<br/>
                         <a href="mailto:climatesmartsolutions@gmail.com">climatesmartsolutions@gmail.com</a>
                     </strong>
