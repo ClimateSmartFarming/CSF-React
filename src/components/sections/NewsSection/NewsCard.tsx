@@ -1,5 +1,5 @@
 import React from 'react';
-import type { newsItem } from '../../../data/news';
+import type { NewsItem } from '../../../data/news';
 import styles from './NewsSection.module.css';
 import { Link } from "react-router-dom";
 import { convert } from "html-to-text";
@@ -27,7 +27,7 @@ export const HtmlSummary: React.FC<SummaryProps> = ({ rawHtml, maxLength = 250 }
 };
 
 interface NewsCardProps {
-  news: newsItem;
+  news: NewsItem;
 }
 
 const formatDate = (dateString: string) => {
