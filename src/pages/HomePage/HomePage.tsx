@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSection from '../../components/sections/HeroSection/HeroSection';
 import FeaturedTools from '../../components/sections/FeaturedTools/FeaturedTools';
-import TeamSection from '../../components/sections/TeamSection/TeamSection';
 import ResourcesSection from '../../components/sections/ResourcesSection/ResourcesSection';
 import styles from './HomePage.module.css';
 
@@ -20,10 +19,6 @@ const HomePage: React.FC = () => {
           maxTools={4}
         />
 
-        <TeamSection
-          title="Meet Our Team"
-          maxMembers={6}
-        />
 
         <ResourcesSection
           title="Featured Resources"
