@@ -1,0 +1,567 @@
+/* src/pages/NetworkMapPage/NetworkMapPage.module.css */
+
+.mapSection {
+  padding: 3rem 0 4rem 0;
+}
+
+/* Filter Bar */
+.filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.filterButton:hover {
+  border-color: #2e7d32;
+  color: #2e7d32;
+}
+
+.filterButton.active {
+  background: #2e7d32;
+  border-color: #2e7d32;
+  color: white;
+}
+
+.filterButton.dairy.active {
+  background: #1976d2;
+  border-color: #1976d2;
+}
+
+.filterButton.apple.active {
+  background: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.filterButton.extension.active {
+  background: #2e7d32;
+  border-color: #2e7d32;
+}
+
+/* Map Wrapper */
+.mapWrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Map Container */
+.mapContainer {
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  min-height: 550px;
+}
+
+/* Leaflet Map Styles */
+.leafletMap {
+  width: 100%;
+  height: 550px;
+  z-index: 1;
+}
+
+/* Custom Marker Styles */
+:global(.custom-marker) {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Popup Styles */
+.popupContent {
+  padding: 0.5rem;
+  min-width: 150px;
+}
+
+.popupContent strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.popupContent small {
+  color: #666;
+}
+
+/* Legend */
+.legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.legend h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.legendItem:last-child {
+  margin-bottom: 0;
+}
+
+.legendDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.dairyDot {
+  background: #1976d2;
+}
+
+.appleDot {
+  background: #d32f2f;
+}
+
+.extensionDot {
+  background: #2e7d32;
+}
+
+/* Info Panel */
+.infoPanel {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  padding: 2rem;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #999;
+}
+
+.placeholderIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.placeholder p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+.memberInfo {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.memberHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.memberIcon {
+  font-size: 2.5rem;
+}
+
+.memberType {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.memberLocation {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.memberCounty {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+}
+
+.memberDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.contactButton {
+  width: 100%;
+  padding: 1rem;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+/* Member List */
+.memberList {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.memberListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.memberList h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin: 0;
+  font-weight: 700;
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.memberCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memberCard:hover {
+  border-color: #2e7d32;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+}
+
+.memberCard.selected {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cardContent h4 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.cardContent p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Pagination Styles */
+.paginationWrapper {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0.5rem 0.75rem;
+  background: #ffffff;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #2e7d32;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
+}
+
+.pageButton.activePage {
+  background: #2e7d32;
+  color: white;
+}
+
+.navButton {
+  padding: 0.5rem 1.25rem;
+}
+
+.resultsInfo {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mapWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .mapContainer {
+    min-height: 450px;
+  }
+
+  .leafletMap {
+    height: 450px;
+  }
+
+  .infoPanel {
+    min-height: auto;
+  }
+
+  .placeholder {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapSection {
+    padding: 2rem 0 3rem 0;
+  }
+
+  .filterBar {
+    gap: 0.75rem;
+  }
+
+  .filterButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .mapContainer {
+    min-height: 400px;
+  }
+
+  .leafletMap {
+    height: 400px;
+  }
+
+  .legend {
+    padding: 0.75rem 1rem;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .legend h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .legendItem {
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .legendDot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .infoPanel {
+    padding: 1.5rem;
+  }
+
+  .memberName {
+    font-size: 1.3rem;
+  }
+
+  .memberList {
+    padding: 1.5rem;
+  }
+
+  .memberList h3 {
+    font-size: 1.3rem;
+  }
+
+  .memberGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    gap: 0.5rem;
+  }
+
+  .pageButton {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+
+  .navButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterButton {
+    text-align: center;
+  }
+
+  .mapContainer {
+    min-height: 350px;
+  }
+
+  .leafletMap {
+    height: 350px;
+  }
+
+  .infoPanel {
+    padding: 1.25rem;
+  }
+
+  .memberHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .memberIcon {
+    font-size: 2rem;
+  }
+
+  .memberName {
+    font-size: 1.2rem;
+  }
+
+  .memberCard {
+    padding: 0.875rem 1rem;
+  }
+
+  .cardIcon {
+    font-size: 1.75rem;
+  }
+
+  .cardContent h4 {
+    font-size: 0.95rem;
+  }
+
+  .cardContent p {
+    font-size: 0.85rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pageNumbers {
+    order: -1;
+  }
+
+  .navButton {
+    width: 100%;
+    max-width: 150px;
+  }
+}

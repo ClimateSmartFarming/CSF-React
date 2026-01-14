@@ -1,0 +1,169 @@
+/* src/pages/VideosPage/VideosPage.module.css */
+
+.videoSection {
+  padding: 2rem 0 4rem 0;
+}
+
+.categorySection {
+  margin-bottom: 4rem;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #e8f5e9;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.videoCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(46, 125, 50, 0.15);
+  border-color: #2e7d32;
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.videoThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.videoCard:hover .videoThumbnail img {
+  transform: scale(1.05);
+}
+
+.videoContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.videoTitle {
+  font-size: 1.2rem;
+  color: #2e7d32;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.videoDate {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 0.75rem 0;
+  font-style: italic;
+}
+
+.videoDescription {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+  flex-grow: 1;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.watchLink {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.watchLink:hover {
+  color: #1b5e20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .videoSection {
+    padding: 1.5rem 0 3rem 0;
+  }
+
+  .categorySection {
+    margin-bottom: 3rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .videoGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .videoThumbnail {
+    height: 200px;
+  }
+
+  .videoContent {
+    padding: 1.25rem;
+  }
+
+  .videoTitle {
+    font-size: 1.1rem;
+  }
+
+  .videoDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoSection {
+    padding: 1rem 0 2rem 0;
+  }
+
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .videoThumbnail {
+    height: 180px;
+  }
+
+  .videoContent {
+    padding: 1rem;
+  }
+
+  .videoTitle {
+    font-size: 1rem;
+  }
+}

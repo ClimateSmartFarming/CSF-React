@@ -1,18 +1,24 @@
+/* src/components/common/Container/Container.module.css */
+
 .container {
-  max-width: var(--max-width);
+  width: 100%;
+  /* Use percentage-based max-width with a cap */
+  max-width: min(90%, 1800px);
   margin: 0 auto;
-  padding: 0 var(--padding-desktop);
-  width: 100%;
+  padding: 0 clamp(1rem, 3vw, 3rem); /* Fluid padding: min 1rem, scales with viewport, max 3rem */
 }
 
-.containerFull {
-  width: 100%;
-  padding: 0 var(--padding-desktop);
-}
-
-@media (max-width: 768px) {
-  .container,
-  .containerFull {
-    padding: 0 var(--padding-mobile);
-  }
-}
+/* 
+  RESPONSIVE SCALING BEST PRACTICES:
+  
+  1. clamp(min, preferred, max) - Fluid values that scale smoothly
+  2. vw/vh - Viewport-relative units (1vw = 1% of viewport width)
+  3. rem/em - Relative to root/parent font size
+  4. min()/max() - Choose smaller/larger of multiple values
+  5. Percentage - Relative to parent container
+  
+  Examples:
+  - clamp(1rem, 2.5vw, 2rem) = Fluid font size
+  - min(90%, 1800px) = 90% of screen OR 1800px, whichever is smaller
+  - padding: 5vw = Padding scales with viewport
+*/

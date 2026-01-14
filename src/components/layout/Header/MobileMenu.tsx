@@ -1,9 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './MobileMenu.module.css';
+
+interface DropdownItem {
+  label: string;
+  href: string;
+}
 
 interface NavigationItem {
   label: string;
-  href: string;
+  href?: string;
+  dropdown?: DropdownItem[];
 }
 
 interface MobileMenuProps {
@@ -13,11 +20,14 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigationItems }) => {
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      setExpandedItem(null); // Reset expanded items when menu closes
     }
 
     return () => {
@@ -41,6 +51,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigationItem
     };
   }, [isOpen, onClose]);
 
+  const toggleDropdown = (label: string) => {
+    setExpandedItem(expandedItem === label ? null : label);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -49,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigationItem
       <div className={styles.mobileMenu}>
         <div className={styles.menuHeader}>
           <span className={styles.menuTitle}>Menu</span>
-          <button 
+          <button
             className={styles.closeButton}
             onClick={onClose}
             aria-label="Close menu"
@@ -57,17 +71,49 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigationItem
             ×
           </button>
         </div>
-        
+
         <nav className={styles.mobileNavigation}>
           {navigationItems.map((item) => (
-            <a 
-              key={item.label}
-              href={item.href}
-              className={styles.mobileNavItem}
-              onClick={onClose}
-            >
-              {item.label}
-            </a>
+            <div key={item.label}>
+              {item.href ? (
+                // Simple link (Home)
+                <Link
+                  to={item.href}
+                  className={styles.mobileNavItem}
+                  onClick={onClose}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                // Dropdown item
+                <>
+                  <button
+                    className={`${styles.mobileNavItem} ${styles.mobileNavDropdown}`}
+                    onClick={() => toggleDropdown(item.label)}
+                  >
+                    <span>{item.label}</span>
+                    <span className={`${styles.mobileDropdownArrow} ${expandedItem === item.label ? styles.expanded : ''}`}>
+                      ▼
+                    </span>
+                  </button>
+
+                  {item.dropdown && expandedItem === item.label && (
+                    <div className={styles.mobileDropdownContent}>
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.label}
+                          to={dropdownItem.href}
+                          className={styles.mobileDropdownItem}
+                          onClick={onClose}
+                        >
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
           ))}
         </nav>
       </div>

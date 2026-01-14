@@ -1,1 +1,100 @@
 @import './styles/globals.css';
+/* src/index.css or src/App.css - Add these global responsive styles */
+
+/* ============================================
+   FLUID RESPONSIVE DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  /* Fluid Typography Scale */
+  --font-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 1.8vw, 1rem);
+  --font-base: clamp(1rem, 2vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 2.2vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 3vw, 2rem);
+  --font-3xl: clamp(2rem, 4vw, 2.5rem);
+  --font-4xl: clamp(2.5rem, 5vw, 3.5rem);
+
+  /* Fluid Spacing Scale */
+  --space-xs: clamp(0.25rem, 1vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 1.5vw, 0.75rem);
+  --space-md: clamp(1rem, 2vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3vw, 2rem);
+  --space-xl: clamp(2rem, 4vw, 3rem);
+  --space-2xl: clamp(3rem, 6vw, 5rem);
+  --space-3xl: clamp(4rem, 8vw, 7rem);
+
+  /* Container Widths */
+  --container-sm: min(95%, 640px);
+  --container-md: min(92%, 1024px);
+  --container-lg: min(90%, 1400px);
+  --container-xl: min(88%, 1800px);
+
+  /* Colors */
+  --color-primary: #2e7d32;
+  --color-primary-dark: #1b5e20;
+  --color-primary-light: #4caf50;
+}
+
+/* Base responsive font size */
+html {
+  font-size: 16px; /* Base for rem calculations */
+}
+
+body {
+  font-size: var(--font-base);
+  line-height: 1.6;
+}
+
+/* Responsive headings using fluid scale */
+h1 {
+  font-size: var(--font-4xl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--font-3xl);
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: var(--font-2xl);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--font-xl);
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: var(--font-lg);
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: var(--font-base);
+  line-height: 1.5;
+}
+
+/* ============================================
+   HOW TO USE IN YOUR COMPONENTS:
+   ============================================
+
+   Instead of:
+     font-size: 24px;
+     padding: 32px;
+     margin-bottom: 48px;
+
+   Use:
+     font-size: var(--font-2xl);
+     padding: var(--space-xl);
+     margin-bottom: var(--space-2xl);
+
+   Or use clamp() directly:
+     font-size: clamp(1.5rem, 3vw, 2rem);
+     padding: clamp(1rem, 4vw, 3rem);
+     gap: clamp(1rem, 2vw, 2rem);
+
+   ============================================ */

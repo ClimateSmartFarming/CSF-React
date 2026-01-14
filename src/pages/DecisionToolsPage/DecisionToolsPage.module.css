@@ -1,0 +1,184 @@
+/* Shared CSS for DecisionToolsPage and ClimateToolsPage */
+/* src/pages/DecisionToolsPage/DecisionToolsPage.module.css */
+/* src/pages/ClimateToolsPage/ClimateToolsPage.module.css */
+
+.toolsSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categorySection {
+  margin-bottom: 4rem;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e8f5e9;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.toolCard {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.toolCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 125, 50, 0.15);
+  border-color: #2e7d32;
+}
+
+.toolIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.toolTitle {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.toolDescription {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.externalLink {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolCard:hover .externalLink {
+  color: #1b5e20;
+}
+
+.backSection {
+  margin-top: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.backLink {
+  color: #2e7d32;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: #1b5e20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toolsSection {
+    padding: 3rem 1rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .categorySection {
+    margin-bottom: 3rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .toolCard {
+    padding: 1.5rem;
+  }
+
+  .toolIcon {
+    font-size: 3rem;
+  }
+
+  .toolTitle {
+    font-size: 1.25rem;
+  }
+
+  .toolDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolsSection {
+    padding: 2rem 1rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .toolCard {
+    padding: 1.25rem;
+  }
+
+  .toolIcon {
+    font-size: 2.5rem;
+  }
+
+  .toolTitle {
+    font-size: 1.15rem;
+  }
+}
